@@ -40,6 +40,28 @@ header .wordmark { font-weight: 700; font-size: 15px; letter-spacing: 0.02em; }
 header .wordmark span { color: var(--accent); }
 header .tag { font-size: 12px; color: var(--ink-dim); }
 
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    border: 1px solid currentColor;
+    font-family: var(--sans);
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    border: 1px solid currentColor;
+    font-family: var(--sans);
+}
+
 .emergency-strip {
     background: var(--ink);
     color: #fff;

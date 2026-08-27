@@ -47,6 +47,17 @@ header .wordmark span { color: var(--accent); }
 
 header .tag { font-size: 12px; color: var(--ink-dim); }
 
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    border: 1px solid currentColor;
+    font-family: var(--sans);
+}
+
 .layout {
     display: grid;
     grid-template-columns: 260px 1fr;

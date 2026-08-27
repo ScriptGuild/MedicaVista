@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedicaVista by ScriptGuild</title>
+
+<style>
+    :root {
+        --ink: #14181f;
+        --ink-dim: #5b6472;
+        --line: #d7dbe1;
+        --line-soft: #ebedf0;
+        --bg: #ffffff;
+        --bg-alt: #fafbfc;
+        --accent: #0a5c9e;
+        --warn-line: #b8860b;
+        --warn-bg: #fdfaf2;
+        --mono: ui-monospace, "SF Mono", "Roboto Mono", Consolas, monospace;
+        --sans: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+        margin: 0;
+        height: 100%;
+        font-family: var(--sans);
+        background: var(--bg);
+        color: var(--ink);
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    header {
+        border-bottom: 1px solid var(--line);
+        padding: 14px 24px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    header .wordmark {
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        color: var(--ink);
+    }
+
+    header .wordmark span { color: var(--accent); }
+
+    header .tag {
+        font-size: 12px;
+        color: var(--ink-dim);
+    }
+
+    .hero {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 64px 24px 40px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 0 10px;
+        letter-spacing: -0.01em;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero p {
+        font-size: 14.5px;
+        color: var(--ink-dim);
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .container {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 24px 60px;
+    }
+
+    .nav-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+    }
+
+    .nav-card {
+        display: block;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        padding: 28px 26px;
+        text-decoration: none;
+        color: inherit;
+        background: var(--bg);
+        transition: background 0.12s ease;
+    }
+
+    .nav-card:hover {
+        background: var(--bg-alt);
+    }
+
+    .nav-card:hover .nav-title {
+        color: var(--accent);
+    }
+
+    .nav-index {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--ink-dim);
+        letter-spacing: 0.04em;
+        margin-bottom: 10px;
+    }
+
+    .nav-title {
+        font-size: 17px;
+        font-weight: 700;
+        margin: 0 0 8px;
+        color: var(--ink);
+    }
+
+    .nav-desc {
+        font-size: 13px;
+        color: var(--ink-dim);
+        margin: 0 0 14px;
+    }
+
+    .nav-path {
+        font-family: var(--mono);
+        font-size: 11.5px;
+        color: var(--accent);
+    }
+
+    .nav-path::after {
+        content: " →";
+    }
+
+    .warning {
+        border: 1px solid var(--warn-line);
+        background: var(--warn-bg);
+        padding: 14px 16px;
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 32px;
+    }
+
+    .warning strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    footer {
+        border-top: 1px solid var(--line);
+        padding: 22px 24px 30px;
+    }
+
+    .footer-inner {
+        max-width: 880px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 12px;
+        color: var(--ink-dim);
+    }
+
+    .footer-inner a {
+        color: var(--ink-dim);
+        text-decoration: none;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .footer-inner a:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+    }
+
+    .footer-contacts {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+        .nav-grid { grid-template-columns: 1fr; }
+        .hero { padding: 44px 20px 32px; }
+        .hero h1 { font-size: 23px; }
+        .footer-inner { flex-direction: column; }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="wordmark">Med<span>Core</span></div>
+    <div class="tag">Clinical reference</div>
+</header>
+
+<div class="hero">
+    <h1>Medica<span>Vista</span></h1>
+</div>
+
+<div class="container">
+
+    <div class="nav-grid">
+
+        <a class="nav-card" href="/drug-information">
+            <div class="nav-index">01</div>
+            <h2 class="nav-title">Drug Information</h2>
+            <p class="nav-desc">Look up ingredients, drug classes, related concepts, and NDC codes via RxNorm.</p>
+            <div class="nav-path">/drug-information</div>
+        </a>
+
+        <a class="nav-card" href="/clinical-calculator">
+            <div class="nav-index">02</div>
+            <h2 class="nav-title">Clinical Calculator</h2>
+            <p class="nav-desc">BMI, CrCl, eGFR, CHA₂DS₂-VASc, MELD-Na, and other bedside scoring tools.</p>
+            <div class="nav-path">/clinical-calculator</div>
+        </a>
+
+        <a class="nav-card" href="/vital-sign-reference-ranges">
+            <div class="nav-index">03</div>
+            <h2 class="nav-title">Vital-Sign Reference Ranges</h2>
+            <p class="nav-desc">Normal ranges for adult and pediatric heart rate, blood pressure, temperature, and SpO₂.</p>
+            <div class="nav-path">/vital-sign-reference-ranges</div>
+        </a>
+
+        <a class="nav-card" href="/first-aid-reference">
+            <div class="nav-index">04</div>
+            <h2 class="nav-title">First-Aid Reference</h2>
+            <p class="nav-desc">Step-by-step guidance for emergencies, injuries, and environmental conditions.</p>
+            <div class="nav-path">/first-aid-reference</div>
+        </a>
+
+    </div>
+
+    <div class="warning">
+        <strong>Reference use only</strong>
+        MedicaVista provides accessible and reliable medical information to help people better understand health, medicine, and healthcare.
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div>Developed by ScriptGuild</div>
+        <div class="footer-contacts">
+            <a href="mailto:scriptguild@scriptguild.xyz">scriptguild@scriptguild.xyz</a>
+            <a href="https://facebook.com/scriptguild" target="_blank" rel="noopener">facebook.com/scriptguild</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

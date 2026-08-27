@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedCore — Drug Reference</title>
+<link rel="stylesheet" href="styles/drug-information.css">
+  
+</head>
+
+<body>
+
+<header>
+    <div class="wordmark">Med<span>Core</span></div>
+    <div class="tag">RxNorm clinical reference</div>
+</header>
+
+<div class="container">
+
+    <div class="search">
+        <input
+            id="drugInput"
+            type="text"
+            placeholder="Drug name (e.g. ibuprofen, metformin, lisinopril)"
+            autocomplete="off"
+            autofocus
+        >
+        <button onclick="searchDrug()">Search</button>
+    </div>
+
+    <div id="status"></div>
+
+    <div id="results"></div>
+
+</div>
+
+
+<script src="scripts/drug-information.js"></script>
+
+</body>
+</html>

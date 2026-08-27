@@ -43,10 +43,7 @@ header .wordmark {
 
 header .wordmark span { color: var(--accent); }
 
-header .tag {
-    font-size: 12px;
-    color: var(--ink-dim);
-}
+header .tag { font-size: 12px; color: var(--ink-dim); }
 
 .hero {
     max-width: 880px;

@@ -46,6 +46,19 @@ header .wordmark span {
 
 header .tag { font-size: 12px; color: var(--ink-dim); }
 
+header .tag { font-size: 12px; color: var(--ink-dim); }
+
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    border: 1px solid currentColor;
+    font-family: var(--sans);
+}
+
 .container {
     max-width: 880px;
     margin: 0 auto;

@@ -1,6 +1,6 @@
 # SGOSL v1.0
 
-## ScriptGuild Source License
+## ScriptGuild Open Source License
 
 **Version 1.0 — August 27, 2026**
 
